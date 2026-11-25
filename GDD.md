@@ -1,7 +1,11 @@
 # Tres Regiones: Tierra en Ruinas
 ### Game Design Document (GDD) — v1.0
 
+![Aru Chasqui y los Colosos en Atacames](docs/banners/portada.png)
+
 ---
+
+![Sección 1](docs/banners/seccion1.png)
 
 ## 1. Portada y Ficha Técnica (High Concept)
 
@@ -22,6 +26,8 @@
 
 ---
 
+![Sección 2](docs/banners/seccion2.png)
+
 ## 2. Pilares de Diseño y Experiencia (Enfoque MDA)
 
 ### 2.1 Tres pilares (reglas innegociables)
@@ -39,6 +45,8 @@
 | **Estéticas (emoción buscada)** | **Tensión y urgencia** (la velocidad sube cada nivel), **dominio** (aprender el patrón del jefe), **descubrimiento** (conocer regiones de Ecuador) y **empatía** (proteger a los rescatados). |
 
 ---
+
+![Sección 3](docs/banners/seccion3.png)
 
 ## 3. Core Loop y Mecánicas
 
@@ -75,12 +83,13 @@ flowchart LR
 |---|---|---|
 | **Victoria de nivel** | Llegar a la meta (o derrotar al jefe del nivel) y recoger el componente. | Pantalla de resumen: distancia, civiles salvados, componente obtenido. |
 | **Victoria de la campaña** | Reunir los 3 componentes, derrotar al Coloso Apu y activar la red en Misahuallí. | Escena final cuyo texto cambia según los civiles rescatados. |
-| **Victoria del juego** | Completar los 4 niveles, vencer al Coloso Apu y reactivar la red. | Pantalla final cuyo texto cambia según los civiles rescatados y los componentes reunidos. |
 | **Derrota** | Quedarse sin corazones (3 al inicio). | *Game Over*; se reintenta desde el último punto de control (mitad del nivel) o desde el inicio. |
 
 **Daño:** obstáculo o Coloso = −1 corazón, con 1,5 s de invulnerabilidad después de cada golpe. Si hay aliado, este absorbe el golpe y el jugador no pierde corazón.
 
 ---
+
+![Sección 4](docs/banners/seccion4.png)
 
 ## 4. Narrativa, Mundo y Personajes
 
@@ -115,6 +124,8 @@ Todos los Colosos son **gigantes de piedra con ojos cian brillantes**: es la se�
 | **Civiles y exploradores** | NPC rescatables | Esperan en plataformas o en el carril. Al ser rescatados acompañan a Aru y absorben un golpe. |
 
 ---
+
+![Sección 5](docs/banners/seccion5.png)
 
 ## 5. Diseño de Niveles y Progresión
 
@@ -155,6 +166,8 @@ Cada nivel mide ~600 m (90–120 s a la velocidad del juego).
 | **Punto de control** | ~300 m | Reaparición tras una derrota. |
 
 ---
+
+![Sección 6](docs/banners/seccion6.png)
 
 ## 6. Dirección de Arte, Audio y UI/UX
 
@@ -250,6 +263,8 @@ flowchart LR
 ```
 
 ---
+
+![Sección 7](docs/banners/seccion7.png)
 
 ## 7. Alcance Técnico y Plan de Producción (MVP)
 

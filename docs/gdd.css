@@ -1,0 +1,43 @@
+/* Estilo del GDD para exportar a PDF/HTML (tablas con cabecera oscura, títulos en carmesí). */
+@page { size: A4; margin: 16mm 15mm 18mm 15mm; }
+:root { --carmesi:#d6004f; --tinta:#12171f; --gris:#5b6472; --linea:#e3e6eb; --zebra:#f6f7f9; }
+* { box-sizing: border-box; }
+html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+body { font-family: "Carlito","Calibri","Segoe UI",Arial,sans-serif; font-size: 10.6pt; line-height: 1.5; color: #232a35; margin: 0; }
+h1 { font-size: 27pt; line-height: 1.12; color: var(--tinta); margin: 0 0 2pt; letter-spacing: -.3pt; }
+h1 + h3 { font-size: 12.5pt; font-weight: 400; color: var(--gris); margin: 0 0 8pt; }
+h2 { font-size: 16.5pt; color: var(--carmesi); margin: 20pt 0 8pt; padding-bottom: 3pt; border-bottom: 2px solid var(--carmesi); break-after: avoid; }
+h3 { font-size: 12.5pt; color: var(--carmesi); margin: 15pt 0 6pt; break-after: avoid; }
+h2 + h3 { margin-top: 8pt; }
+p { margin: 0 0 7pt; }
+strong { color: var(--tinta); }
+a { color: var(--carmesi); text-decoration: none; }
+hr { border: 0; height: 0; margin: 6pt 0; }
+img { max-width: 100%; height: auto; display: block; margin: 6pt auto; break-inside: avoid; }
+h2 img, p > img[src*="banners/seccion"] { margin: 16pt 0 0; }
+p > img[src*="banners/portada"] { margin: 4pt 0 8pt; }
+blockquote { margin: 8pt 0 10pt; padding: 8pt 14pt; background: #fff1f6; border-left: 4px solid var(--carmesi); color: var(--tinta); border-radius: 0 6px 6px 0; }
+blockquote p { margin: 0; }
+code { font-family: "DejaVu Sans Mono", Consolas, monospace; font-size: 9pt; background: #eef0f4; padding: 1px 4px; border-radius: 3px; color: #1f2937; }
+pre { background: #f3f4f7; padding: 8pt 10pt; border-radius: 6px; font-size: 8.4pt; line-height: 1.35; break-inside: avoid; overflow: hidden; }
+pre code { background: none; padding: 0; }
+ul, ol { margin: 0 0 8pt; padding-left: 18pt; }
+li { margin-bottom: 2pt; }
+
+/* Tablas */
+table { width: 100%; border-collapse: collapse; margin: 8pt 0 12pt; font-size: 9.5pt; line-height: 1.38; border-bottom: 2px solid var(--tinta); }
+thead th { background: var(--tinta); color: #fff; text-align: left; font-weight: 700; padding: 7pt 9pt; }
+tbody td { padding: 6pt 9pt; vertical-align: top; border-bottom: 1px solid var(--linea); }
+tbody tr:nth-child(even) td { background: var(--zebra); }
+tbody tr:last-child td { border-bottom: 0; }
+tbody td:first-child { font-weight: 700; color: var(--tinta); }
+tr { break-inside: avoid; }
+td img { margin: 3pt auto; }
+table:has(img) tbody td:first-child { font-weight: 400; }
+table:has(img) tbody td { text-align: center; }
+table:has(img) thead th { text-align: center; }
+
+/* Diagramas Mermaid */
+.mermaid { text-align: center; margin: 8pt 0 12pt; break-inside: avoid; }
+.mermaid svg { max-width: 100%; height: auto; }
+em { color: #3b4350; }
