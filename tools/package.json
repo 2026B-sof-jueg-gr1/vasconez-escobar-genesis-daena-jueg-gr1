@@ -1,0 +1,7 @@
+{
+  "name": "tres-regiones-herramientas",
+  "private": true,
+  "description": "Genera las imágenes del juego (SVG -> PNG).",
+  "scripts": { "arte": "node arte/index.cjs" },
+  "dependencies": { "sharp": "^0.35.0" }
+}

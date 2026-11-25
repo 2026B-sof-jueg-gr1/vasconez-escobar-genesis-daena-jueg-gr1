@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-4 0 194 150" width="388" height="300"><defs>
+<linearGradient id="piedra" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#b4aea4"/><stop offset="1" stop-color="#77716a"/></linearGradient>
+<linearGradient id="piedraOsc" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8f897f"/><stop offset="1" stop-color="#5c5750"/></linearGradient>
+<linearGradient id="madera" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#c58a54"/><stop offset="1" stop-color="#8f5a30"/></linearGradient>
+<linearGradient id="ladrillo" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#cf8a5c"/><stop offset="1" stop-color="#a65f3a"/></linearGradient>
+<linearGradient id="cristal" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#bff9ff"/><stop offset="0.5" stop-color="#3fd6e0"/><stop offset="1" stop-color="#14868f"/></linearGradient>
+<linearGradient id="ambar" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffd978"/><stop offset="1" stop-color="#e8962a"/></linearGradient>
+<filter id="brillo" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="2.2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<filter id="brilloFuerte" x="-80%" y="-80%" width="260%" height="260%"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<pattern id="peligro" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="5" height="10" fill="#f2b138"/><rect x="5" width="5" height="10" fill="#2b1d16"/></pattern>
+</defs><g transform="translate(4 0)">
+    <ellipse cx="100" cy="146" rx="84" ry="5" fill="#000" opacity="0.17"/>
+    <path d="M60 60 L72 34 L84 58 L98 28 L112 58 L128 36 L136 64Z" fill="url(#piedraOsc)" stroke="#2b1d16" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M52 142 Q44 70 100 56 Q166 50 176 142Z" fill="url(#piedra)" stroke="#2b1d16" stroke-width="3.6" stroke-linejoin="round"/>
+    <path d="M120 70 L116 92 L128 112 M146 84 L140 108" stroke="#2b1d16" stroke-width="1.6" fill="none" stroke-linecap="round" opacity="0.55"/>
+    <ellipse cx="150" cy="66" rx="13" ry="6" fill="#6fae5a" stroke="#3f7a35" stroke-width="1.2" opacity="0.95"/><ellipse cx="166" cy="128" rx="9" ry="4" fill="#6fae5a" stroke="#3f7a35" stroke-width="1.2" opacity="0.95"/><ellipse cx="70" cy="70" rx="9" ry="4" fill="#6fae5a" stroke="#3f7a35" stroke-width="1.2" opacity="0.95"/>
+    <path d="M150 74 q-3 22 2 44 M162 80 q-3 20 0 38" stroke="#bfeaf5" stroke-width="3.4" fill="none" stroke-linecap="round" opacity="0.85"/>
+    <rect x="12" y="44" width="100" height="84" rx="30" fill="url(#piedra)" stroke="#2b1d16" stroke-width="3.6"/>
+    <path d="M24 46 l8 -14 8 14z M86 44 l8 -14 8 14z" fill="url(#piedraOsc)" stroke="#2b1d16" stroke-width="2.6" stroke-linejoin="round"/>
+    <path d="M22 96 Q62 80 104 96 L104 124 Q62 140 22 124Z" fill="#2a1a1a" stroke="#2b1d16" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M30 118 Q62 130 96 118" stroke="#6b2f2f" stroke-width="6" fill="none" stroke-linecap="round" opacity="0.7"/>
+    <path d="M34 98 l5 12 l5 -12z" fill="#efe9dc" stroke="#2b1d16" stroke-width="1.6" stroke-linejoin="round"/><path d="M34 122 l5 -12 l5 12z" fill="#efe9dc" stroke="#2b1d16" stroke-width="1.6" stroke-linejoin="round"/><path d="M46 98 l5 12 l5 -12z" fill="#efe9dc" stroke="#2b1d16" stroke-width="1.6" stroke-linejoin="round"/><path d="M46 122 l5 -12 l5 12z" fill="#efe9dc" stroke="#2b1d16" stroke-width="1.6" stroke-linejoin="round"/><path d="M58 98 l5 12 l5 -12z" fill="#efe9dc" stroke="#2b1d16" stroke-width="1.6" stroke-linejoin="round"/><path d="M58 122 l5 -12 l5 12z" fill="#efe9dc" stroke="#2b1d16" stroke-width="1.6" stroke-linejoin="round"/><path d="M70 98 l5 12 l5 -12z" fill="#efe9dc" stroke="#2b1d16" stroke-width="1.6" stroke-linejoin="round"/><path d="M70 122 l5 -12 l5 12z" fill="#efe9dc" stroke="#2b1d16" stroke-width="1.6" stroke-linejoin="round"/><path d="M82 98 l5 12 l5 -12z" fill="#efe9dc" stroke="#2b1d16" stroke-width="1.6" stroke-linejoin="round"/><path d="M82 122 l5 -12 l5 12z" fill="#efe9dc" stroke="#2b1d16" stroke-width="1.6" stroke-linejoin="round"/><path d="M94 98 l5 12 l5 -12z" fill="#efe9dc" stroke="#2b1d16" stroke-width="1.6" stroke-linejoin="round"/><path d="M94 122 l5 -12 l5 12z" fill="#efe9dc" stroke="#2b1d16" stroke-width="1.6" stroke-linejoin="round"/>
+    <ellipse cx="44" cy="68" rx="7" ry="4.8" fill="#8ffaff" filter="url(#brillo)"/><ellipse cx="44" cy="68" rx="3.5" ry="2.4" fill="#ffffff"/><ellipse cx="82" cy="68" rx="7" ry="4.8" fill="#8ffaff" filter="url(#brillo)"/><ellipse cx="82" cy="68" rx="3.5" ry="2.4" fill="#ffffff"/>
+    <path d="M30 56 Q44 48 58 56 M68 56 Q82 48 96 56" stroke="#2b1d16" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <ellipse cx="60" cy="46" rx="14" ry="5" fill="#6fae5a" stroke="#3f7a35" stroke-width="1.2" opacity="0.95"/>
+    <circle cx="18" cy="136" r="14" fill="url(#piedra)" stroke="#2b1d16" stroke-width="3.2"/>
+    <path d="M64 50 L60 62" stroke="#2b1d16" stroke-width="1.6" fill="none" stroke-linecap="round" opacity="0.55"/></g></svg>

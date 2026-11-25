@@ -3,7 +3,7 @@ new Phaser.Game({
   type: Phaser.AUTO,
   width: CONFIG.ANCHO,
   height: CONFIG.ALTO,
-  backgroundColor: '#7ed6f7',
+  backgroundColor: '#1b1c20',
   scale: {
     mode: Phaser.Scale.FIT,
     autoCenter: Phaser.Scale.CENTER_BOTH
@@ -15,5 +15,5 @@ new Phaser.Game({
       debug: false
     }
   },
-  scene: [BootScene, MenuScene, JuegoScene]
+  scene: [BootScene, MenuScene, NivelesScene, JuegoScene]
 });

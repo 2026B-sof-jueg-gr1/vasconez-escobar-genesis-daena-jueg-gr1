@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 80" width="128" height="80"><defs>
+<linearGradient id="piedra" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#b4aea4"/><stop offset="1" stop-color="#77716a"/></linearGradient>
+<linearGradient id="piedraOsc" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8f897f"/><stop offset="1" stop-color="#5c5750"/></linearGradient>
+<linearGradient id="madera" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#c58a54"/><stop offset="1" stop-color="#8f5a30"/></linearGradient>
+<linearGradient id="ladrillo" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#cf8a5c"/><stop offset="1" stop-color="#a65f3a"/></linearGradient>
+<linearGradient id="cristal" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#bff9ff"/><stop offset="0.5" stop-color="#3fd6e0"/><stop offset="1" stop-color="#14868f"/></linearGradient>
+<linearGradient id="ambar" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffd978"/><stop offset="1" stop-color="#e8962a"/></linearGradient>
+<filter id="brillo" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="2.2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<filter id="brilloFuerte" x="-80%" y="-80%" width="260%" height="260%"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<pattern id="peligro" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="5" height="10" fill="#f2b138"/><rect x="5" width="5" height="10" fill="#2b1d16"/></pattern>
+</defs>
+  <defs><linearGradient id="barro" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#a8693d"/><stop offset="1" stop-color="#6b4223"/></linearGradient></defs>
+  <rect width="128" height="80" fill="url(#barro)"/>
+  <rect y="0" width="128" height="12" fill="#4fae56"/><rect y="0" width="128" height="4" fill="#1f6b32"/><rect y="10" width="128" height="4" fill="#3a8a44"/>
+  <path d="M10 12 l3 -8 3 8 M50 12 l3 -9 3 9 M96 12 l3 -8 3 8" stroke="#1f6b32" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <g fill="#85502a"><circle cx="22" cy="38" r="4"/><circle cx="70" cy="60" r="5"/><circle cx="104" cy="40" r="3.4"/></g>
+  <path d="M40 30 q10 -6 18 0" stroke="#ffd93b" stroke-width="2.4" fill="none" stroke-linecap="round"/></svg>
