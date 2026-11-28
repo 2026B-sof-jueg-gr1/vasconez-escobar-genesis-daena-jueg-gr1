@@ -5,9 +5,9 @@ const path = require('path');
 const sharp = require('sharp');
 
 const raiz = path.resolve(__dirname, '..', '..');
-const salidaSprites = path.join(raiz, 'assets', 'sprites');
-const salidaFondos = path.join(raiz, 'assets', 'fondos');
-const salidaSvg = path.join(raiz, 'assets', 'fuentes');
+const salidaSprites = path.join(raiz, 'juego', 'assets', 'sprites');
+const salidaFondos = path.join(raiz, 'juego', 'assets', 'fondos');
+const salidaSvg = path.join(raiz, 'juego', 'assets', 'fuentes');
 [salidaSprites, salidaFondos, salidaSvg].forEach(d => fs.mkdirSync(d, { recursive: true }));
 
 const sprites = Object.assign({},

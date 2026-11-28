@@ -1,7 +1,7 @@
 // Landing de "Tres Regiones: Tierra en Ruinas". Escenas de práctica con las mismas imágenes del juego.
 (function () {
   'use strict';
-  var A = '../assets/';
+  var A = 'juego/assets/';
   var SUELO = 370;       // línea del suelo dentro del lienzo de 800x450
   var AX = 150;          // posición horizontal de Aru
   var VEL0 = 330;

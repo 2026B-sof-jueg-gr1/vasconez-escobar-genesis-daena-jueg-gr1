@@ -1,29 +1,249 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tres Regiones: Tierra en Ruinas</title>
-  <style>
-    body {
-      margin: 0;
-      display: flex;
-      justify-content: center;
-      background: #1b1c20;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tres Regiones: Tierra en Ruinas — el juego de correr por Ecuador</title>
+<meta name="description" content="Runner 2D en el navegador: recorre Atacames, Ambato, Baños y Misahuallí, rescata civiles y enfrenta a los Colosos para reactivar la red de comunicación de Ecuador.">
+<link rel="stylesheet" href="landing/landing.css">
 </head>
 <body>
-  <script src="https://cdn.jsdelivr.net/npm/phaser@3.80.1/dist/phaser.min.js"></script>
-  <script src="src/datos/config.js"></script>
-  <script src="src/datos/niveles.js"></script>
-  <script src="src/datos/assets.js"></script>
-  <script src="src/sistemas/record.js"></script>
-  <script src="src/sistemas/progreso.js"></script>
-  <script src="src/escenas/BootScene.js"></script>
-  <script src="src/escenas/MenuScene.js"></script>
-  <script src="src/escenas/NivelesScene.js"></script>
-  <script src="src/escenas/JuegoScene.js"></script>
-  <script src="src/main.js"></script>
+
+<header class="nav">
+  <div class="caja">
+    <a class="logo" href="#inicio">TRES REGIONES</a>
+    <nav>
+      <a href="#historia">Historia</a><a href="#jugar">Cómo se juega</a><a href="#regiones">Regiones</a><a href="#colosos">Colosos</a><a href="#alma">El alma</a><a href="#reglas">Clasificación</a><a href="#honor">Muro de Honor</a>
+      <a class="nav-jugar" href="juego/">▶ Jugar</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section id="inicio" class="hero">
+  <div class="caja hero-texto">
+    <p class="etiqueta">Un runner 2D ambientado en Ecuador</p>
+    <h1>Tres Regiones:<br><span>Tierra en Ruinas</span></h1>
+    <p class="lead">Quito cayó, la red de comunicación se apagó y solo un mensajero lo bastante rápido puede volver a encenderla. <b>Corre, salta, desliza y combate</b> por la Costa, la Sierra y la Amazonía.</p>
+    <div class="botones">
+      <a class="btn btn-sol" href="juego/">▶ Jugar ahora</a>
+      <a class="btn btn-borde" href="#historia">Conocer la historia</a>
+    </div>
+  </div>
+  <div class="caja">
+    <div class="marco" id="escenaHero" aria-label="Aru corriendo por la playa de Atacames"></div>
+  </div>
+  <div class="cifras caja">
+    <div><b>4</b><span>regiones de Ecuador</span></div>
+    <div><b>3</b><span>jefes Coloso</span></div>
+    <div><b>3</b><span>componentes por recuperar</span></div>
+    <div><b>0</b><span>instalaciones: se juega en el navegador</span></div>
+  </div>
+</section>
+
+<!-- ===== HISTORIA ===== -->
+<section id="historia" class="seccion crema">
+  <div class="caja">
+    <h2 class="titulo">La historia</h2>
+    <p class="sub">Cinco capítulos para entender qué pasó con Ecuador y por qué todo depende de Aru.</p>
+
+    <div class="capitulos">
+
+      <article class="cap revelar">
+        <div class="cap-num">1</div>
+        <div class="cap-texto">
+          <h3>Los hijos de la ceniza</h3>
+          <p>Durante generaciones, Ecuador convivió con los <b>Colosos</b>: criaturas gigantes de piedra que nacieron de la ceniza de los volcanes. Tenían los ojos de un cian brillante y una fuerza capaz de aplastar un pueblo entero.</p>
+          <p>Pero había un equilibrio. La <b>Guardia Cóndor</b>, una organización de exploradores y mensajeros, protegía los asentamientos con una red de comunicación que unía la Costa, la Sierra, Baños y la Amazonía. Una señal a tiempo salvaba pueblos enteros.</p>
+        </div>
+        <div class="cap-arte arte-1"><img src="juego/assets/sprites/errante.png" alt="Coloso Errante" width="124" height="144"><img src="juego/assets/sprites/estibador.png" alt="Coloso Estibador" width="176" height="190"></div>
+      </article>
+
+      <article class="cap revelar inversa">
+        <div class="cap-num">2</div>
+        <div class="cap-texto">
+          <h3>La noche en que cayó Quito</h3>
+          <p>Una noche, una horda de Colosos cruzó las barreras. No hubo tiempo de avisar a nadie. Quito fue arrasada y el cuartel de la Guardia quedó enterrado bajo la piedra.</p>
+          <p>Con él se apagó la red. Sin comunicación, ningún pueblo podía coordinar sus defensas ni organizar una evacuación. Cada región quedó sola, escuchando el silencio y los pasos lejanos de los gigantes.</p>
+        </div>
+        <div class="cap-arte arte-2"><img src="juego/assets/sprites/pilar.png" alt="Pilar en ruinas" width="112" height="240"><img src="juego/assets/sprites/colgante.png" alt="Estructura colgante" width="220" height="260"></div>
+      </article>
+
+      <article class="cap revelar">
+        <div class="cap-num">3</div>
+        <div class="cap-texto">
+          <h3>El encargo de Aru Chasqui</h3>
+          <p>Los últimos comandantes sobrevivientes eligieron a quien nunca había perdido una carrera: <b>Aru Chasqui</b>, el mensajero más veloz de la Guardia. Joven, con diadema de plumas, morral y una espada corta, Aru no pelea por gloria: pelea para que su gente no quede aislada.</p>
+          <p>Su misión: reunir <b>tres componentes</b> escondidos en Atacames, Ambato y el Pailón del Diablo, y llevarlos hasta la estación de Misahuallí.</p>
+        </div>
+        <div class="cap-arte arte-3"><img class="corre" src="juego/assets/sprites/aru_correr1.png" alt="Aru Chasqui" width="160" height="250"><img class="flota" src="juego/assets/sprites/componente.png" alt="Componente de comunicación" width="104" height="104"></div>
+      </article>
+
+      <article class="cap revelar inversa">
+        <div class="cap-num">4</div>
+        <div class="cap-texto">
+          <h3>Cuatro regiones, un solo camino</h3>
+          <p>El viaje cruza <b>Atacames</b> y sus playas rotas, el <b>Laberinto de los Tres Juanes</b> en Ambato, la garganta del <b>Pailón del Diablo</b> en Baños y, al final, la selva de <b>Misahuallí</b>.</p>
+          <p>En el camino hay civiles atrapados. Quien los rescata gana aliados: cada uno <b>absorbe un golpe</b> por Aru antes de ponerse a salvo. Y al final de la ruta espera el <b>Coloso Apu</b>, el guardián de la estación.</p>
+        </div>
+        <div class="cap-arte arte-4"><div class="mini m1"></div><div class="mini m2"></div><div class="mini m3"></div><div class="mini m4"></div></div>
+      </article>
+
+      <article class="cap revelar">
+        <div class="cap-num">5</div>
+        <div class="cap-texto">
+          <h3>El final lo escribes tú</h3>
+          <p>Reactivar la red no es el único resultado importante. Cada civil que salvas durante el viaje cambia lo que ocurre cuando las luces vuelven. Elige cuántos rescataste y mira el desenlace:</p>
+          <div class="fichas" id="fichasFinal" role="tablist">
+            <button class="ficha activa" data-f="0" role="tab">0 – 3 civiles</button>
+            <button class="ficha" data-f="1" role="tab">4 – 7 civiles</button>
+            <button class="ficha" data-f="2" role="tab">8 o más</button>
+            <button class="ficha" data-f="3" role="tab">Faltan componentes</button>
+          </div>
+          <p class="final-texto" id="textoFinal"></p>
+        </div>
+        <div class="cap-arte arte-5"><img class="flota" src="juego/assets/sprites/civil.png" alt="Civil rescatado" width="100" height="160"><img class="flota retraso" src="juego/assets/sprites/icono_comp.png" alt="" width="84" height="84"></div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== CÓMO SE JUEGA ===== -->
+<section id="jugar" class="seccion cielo">
+  <div class="caja">
+    <h2 class="titulo">Pruébalo aquí mismo</h2>
+    <p class="sub">Esta es una versión de práctica. Usa el teclado (o los botones) y mira cómo responde Aru. Esquiva los obstáculos y vence a los Colosos.</p>
+    <div class="marco" id="escenaJugar" tabindex="0" aria-label="Práctica interactiva de controles"></div>
+    <div class="marcador"><span>Colosos vencidos: <b id="cVencidos">0</b></span><span>Golpes recibidos: <b id="cGolpes">0</b></span><span id="msg" class="msg">¡Prepárate!</span></div>
+    <div class="controles">
+      <button class="ctl" data-a="salto"><span class="teclas"><kbd>Espacio</kbd><kbd>↑</kbd></span><b>Saltar</b><small>Doble salto en el aire</small></button>
+      <button class="ctl" data-a="desliz"><span class="teclas"><kbd>↓</kbd><kbd>S</kbd></span><b>Deslizarse</b><small>Bajo estructuras y ataques altos</small></button>
+      <button class="ctl rojo" data-a="ataque"><span class="teclas"><kbd>X</kbd><kbd>Z</kbd><kbd>Shift</kbd></span><b>Atacar</b><small>Elimina Colosos pequeños</small></button>
+    </div>
+  </div>
+</section>
+
+<!-- ===== REGIONES ===== -->
+<section id="regiones" class="seccion crema">
+  <div class="caja">
+    <h2 class="titulo">Recorre las cuatro regiones</h2>
+    <p class="sub">Elige una región y mira cómo cambian el paisaje, los obstáculos y el jefe.</p>
+    <div class="tabs" id="tabsRegion" role="tablist">
+      <button class="tab activa" data-r="1" role="tab"><i>1</i>Atacames</button>
+      <button class="tab" data-r="2" role="tab"><i>2</i>Ambato</button>
+      <button class="tab" data-r="3" role="tab"><i>3</i>Pailón del Diablo</button>
+      <button class="tab" data-r="4" role="tab"><i>4</i>Misahuallí</button>
+    </div>
+    <div class="region-grid">
+      <div class="marco" id="escenaRegion" aria-label="Vista previa de la región"></div>
+      <div class="region-info" id="infoRegion"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== COLOSOS ===== -->
+<section id="colosos" class="seccion verde">
+  <div class="caja">
+    <h2 class="titulo blanco">Conoce a los Colosos</h2>
+    <p class="sub blanco">Gigantes de piedra con ojos cian: esa es la señal de que se pueden atacar. Toca una tarjeta para ver su patrón.</p>
+    <div class="cartas">
+      <div class="carta" tabindex="0"><div class="cara frente"><img src="juego/assets/sprites/errante.png" alt="" width="124" height="144"><h3>Coloso Errante</h3><small>Enemigo básico · Niveles 1–4</small></div><div class="cara dorso"><h3>Coloso Errante</h3><p>Camina hacia ti a 120 px/s por el suelo. Se elimina de un solo golpe, pero si te alcanza pierdes un corazón.</p></div></div>
+      <div class="carta" tabindex="0"><div class="cara frente"><img src="juego/assets/sprites/trepador.png" alt="" width="128" height="128"><h3>Coloso Trepador</h3><small>Enemigo aéreo · Ambato</small></div><div class="cara dorso"><h3>Coloso Trepador</h3><p>Cuelga de las estructuras y se deja caer cuando estás a menos de 250 px. Esquívalo con un salto o un deslizamiento: mientras cuelga no se puede atacar.</p></div></div>
+      <div class="carta" tabindex="0"><div class="cara frente"><img src="juego/assets/sprites/estibador.png" alt="" width="176" height="190"><h3>Coloso Estibador</h3><small>Jefe · Atacames</small></div><div class="cara dorso"><h3>Coloso Estibador</h3><p>Lanza cajas bajas (se saltan) y altas (se esquivan deslizando), siempre tras un destello rojo. Tras 3 lanzamientos queda aturdido: ¡ataca! Necesitas 5 golpes.</p></div></div>
+      <div class="carta" tabindex="0"><div class="cara frente"><img src="juego/assets/sprites/canon.png" alt="" width="190" height="150"><h3>Coloso Cañón</h3><small>Jefe · Pailón del Diablo</small></div><div class="cara dorso"><h3>Coloso Cañón</h3><p>Escupe rocas y abre huecos en el camino. Con poca vida encadena dos ataques seguidos. Aguanta 6 golpes.</p></div></div>
+      <div class="carta" tabindex="0"><div class="cara frente"><img src="juego/assets/sprites/apu.png" alt="" width="200" height="190"><h3>Coloso Apu</h3><small>Jefe final · Misahuallí</small></div><div class="cara dorso"><h3>Coloso Apu</h3><p>El guardián de la estación. Mezcla troncos, rocas altas, huecos y un barrido de liana que obliga a deslizarse. Son 7 golpes para vencerlo.</p></div></div>
+    </div>
+
+    <h3 class="subtitulo blanco">Cómo leer el peligro</h3>
+    <div class="lenguaje">
+      <div><img src="juego/assets/sprites/errante.png" alt="" width="62" height="72"><b>Piedra con ojos cian</b><span>Coloso: ataca (X) o esquiva</span></div>
+      <div><img src="juego/assets/sprites/muro.png" alt="" width="64" height="56"><b>Franjas amarillas y negras</b><span>Obstáculo: salta o desliza</span></div>
+      <div><img src="juego/assets/sprites/civil.png" alt="" width="40" height="64"><b>Persona con aura verde</b><span>Civil: tócalo para rescatarlo</span></div>
+      <div><img src="juego/assets/sprites/componente.png" alt="" width="56" height="56"><b>Bananos y cristal dorado</b><span>Suministro o componente: recógelo</span></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ===== EL ALMA ===== -->
+<section id="alma" class="seccion">
+  <div class="caja">
+    <h2 class="titulo">El alma del juego</h2>
+    <blockquote class="logline">Quito calló. Una mensajera corre por Ecuador para encender de nuevo la red que une a las tres regiones, y cada región le enseña algo que solo sabe quien la recorre.</blockquote>
+    <div class="dos">
+      <div class="tarjeta">
+        <h3>Resonancia ludonarrativa</h3>
+        <p>La mecánica central es <b>correr, leer el peligro y reaccionar</b>: saltar, deslizar o atacar según lo que aparece. Es lo mismo que hace Aru en la historia: un chasqui, mensajero que cruza el territorio para que la información llegue a tiempo.</p>
+        <p>Jugar bien <b>es</b> recorrer Ecuador: cada nivel cambia de región, de paisaje y de obstáculos, así que para avanzar hay que fijarse en el entorno, no solo en los botones. Mecánica e historia dicen lo mismo: conocer el territorio es lo que lo salva.</p>
+      </div>
+      <div class="tarjeta">
+        <h3>Qué se aprende jugando</h3>
+        <p>Atacames, Ambato, el Pailón del Diablo y Misahuallí aparecen con su paisaje, su clima y su identidad. Cada jefe pide aprender un patrón (aviso rojo, ataque, aturdimiento) antes de poder vencerlo: se aprende por repetición, no por texto.</p>
+        <p>Rescatar civiles y recuperar tres componentes de comunicación da sentido a cada carrera: el objetivo no es solo llegar, sino <b>llegar con los demás</b>.</p>
+      </div>
+    </div>
+    <h3 class="sub2">Lo principal</h3>
+    <ul class="rasgos">
+      <li><b>4 regiones</b> de Ecuador, cada una con su propio fondo y ritmo.</li>
+      <li><b>3 jefes Coloso</b> con patrones propios y una segunda fase.</li>
+      <li><b>Final variable</b> según cuántos civiles rescatas y cuántos componentes recuperas.</li>
+      <li><b>Cuatro acciones</b> (saltar, deslizar, atacar, rescatar) que se leen en segundos.</li>
+      <li><b>Gratis y en el navegador</b>: sin instalar nada, también con botones en pantalla.</li>
+    </ul>
+    <div class="centro"><a class="btn btn-sol grande" href="juego/">▶ JUGAR</a></div>
+  </div>
+</section>
+
+<!-- ===== REGLAS DEL MUNDO REAL ===== -->
+<section id="reglas" class="seccion crema">
+  <div class="caja">
+    <h2 class="titulo">Reglas del mundo real</h2>
+    <div class="clasif">
+      <div class="sello"><b>7+</b><span>Mensajeros<br>de todas las edades</span></div>
+      <ul>
+        <li><b>Violencia fantástica leve:</b> Aru golpea a criaturas de piedra; no hay sangre ni personas heridas.</li>
+        <li><b>Tensión:</b> persecuciones, jefes y un mundo en ruinas, sin escenas perturbadoras.</li>
+        <li><b>Sin compras, sin anuncios, sin chat.</b></li>
+        <li><b>Datos:</b> solo guarda tu récord y tu progreso en tu propio navegador (localStorage). No envía nada a ningún servidor.</li>
+        <li><b>Salud:</b> haz pausas; el juego tiene luces rojas intermitentes en los avisos de ataque.</li>
+      </ul>
+    </div>
+    <p class="nota">Clasificación propia del proyecto, hecha con la lógica de ESRB y PEGI (descriptores de contenido, interacción y datos). No es una clasificación oficial.</p>
+  </div>
+</section>
+
+<!-- ===== MURO DE HONOR ===== -->
+<section id="honor" class="seccion">
+  <div class="caja">
+    <h2 class="titulo">Muro de Honor</h2>
+    <p class="sub">Nadie crea un juego solo del todo. Estas son las herramientas y la gente detrás de lo que hace posible este.</p>
+    <div class="muro">
+      <div class="placa"><h3>Phaser 3</h3><p>Motor de juego HTML5 de Photon Storm / Phaser Studio.</p><small>Licencia MIT · phaser.io</small></div>
+      <div class="placa"><h3>Arte del juego</h3><p>Personajes, Colosos, objetos, fondos y banners: ilustraciones vectoriales propias de Génesis Daena Vásconez Escobar.</p><small>Obra propia</small></div>
+      <div class="placa"><h3>sharp / libvips</h3><p>Herramienta usada para exportar los SVG a PNG. No se distribuye con el juego.</p><small>Apache 2.0 · sharp.pixelplumbing.com</small></div>
+      <div class="placa"><h3>Audio</h3><p>Esta versión no incluye música ni efectos de sonido, así que no hay créditos de audio todavía. Cuando se agreguen, aparecerán aquí con su autor y licencia (CC0, CC BY, etc.).</p><small>Pendiente</small></div>
+    </div>
+    <p class="nota">Las fotos de referencia (moodboard) del documento de diseño son solo inspiración y no forman parte del juego.</p>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="cta">
+  <div class="caja">
+    <h2>¿Listo para encender la red?</h2>
+    <p>Ecuador está esperando a su mensajero.</p>
+    <a class="btn btn-sol grande" href="juego/">▶ Jugar ahora</a>
+  </div>
+</section>
+
+<footer>
+  <div class="caja">
+    <p>Tres Regiones: Tierra en Ruinas — proyecto individual de Génesis Daena Vásconez Escobar · Escuela Politécnica Nacional · 2026</p>
+    <p><a href="#honor">Muro de Honor</a> · <a href="#reglas">Clasificación 7+</a> · Hecho con <a href="https://phaser.io" target="_blank" rel="noopener">Phaser 3</a> · Arte vectorial propio</p>
+  </div>
+</footer>
+
+<script src="landing/landing.js"></script>
 </body>
 </html>

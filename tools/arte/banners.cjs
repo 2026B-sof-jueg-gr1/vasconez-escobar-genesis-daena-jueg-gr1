@@ -5,8 +5,8 @@ const sharp = require('sharp');
 const raiz = path.resolve(__dirname, '..', '..');
 const sal = path.join(raiz, 'docs', 'banners');
 fs.mkdirSync(sal, { recursive: true });
-const S = n => path.join(raiz, 'assets', 'sprites', n + '.png');
-const F = n => path.join(raiz, 'assets', 'fondos', n + '.png');
+const S = n => path.join(raiz, 'juego', 'assets', 'sprites', n + '.png');
+const F = n => path.join(raiz, 'juego', 'assets', 'fondos', n + '.png');
 const FUENTE = 'DejaVu Sans, Arial, sans-serif';
 
 const SECCIONES = [

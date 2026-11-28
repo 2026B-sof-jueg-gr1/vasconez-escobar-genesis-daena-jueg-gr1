@@ -284,26 +284,29 @@ flowchart LR
 ```
 ├── GDD.md                  Documento de diseño (entrega del examen)
 ├── README.md               Cómo ejecutar el juego
-├── index.html              Punto de entrada del juego
-├── landing/                Página de presentación del juego (con capturas)
-├── assets/
-│   ├── sprites/            Personajes, Colosos, obstáculos e iconos (PNG)
-│   ├── fondos/             Cielo, nubes, paisajes y suelo de cada región (PNG)
-│   └── fuentes/            Archivos SVG originales
-├── src/
-│   ├── datos/              Configuración, niveles y catálogo de imágenes
-│   ├── sistemas/           Récord y progreso
-│   └── escenas/            Pantallas: carga, menú, niveles y juego
+├── index.html              Landing page (escaparate) con botón JUGAR
+├── landing/                Estilos, script e imágenes de la landing
+├── juego/
+│   ├── index.html          Punto de entrada del juego
+│   ├── lib/                Phaser 3 (copia local)
+│   ├── assets/
+│   │   ├── sprites/        Personajes, Colosos, obstáculos e iconos (PNG)
+│   │   ├── fondos/         Cielo, nubes, paisajes y suelo de cada región (PNG)
+│   │   └── fuentes/        Archivos SVG originales
+│   └── src/
+│       ├── datos/          Configuración, niveles y catálogo de imágenes
+│       ├── sistemas/       Récord y progreso
+│       └── escenas/        Pantallas: carga, menú, niveles y juego
 ├── docs/                   Imágenes del GDD (concepto, moodboard, bocetos, capturas)
 ├── tools/arte/             Script que genera las imágenes
-└── .github/workflows/      Publicación automática en GitHub Pages
+└── .github/workflows/      Publicación automática: GitHub Pages e itch.io
 ```
 
 **Punto de partida:** el repositorio ya contenía un prototipo en Phaser con correr automático, doble salto, obstáculos, objetos recolectables, parallax, HUD, menú y récord guardado. Ese código se adaptó a este diseño.
 
 ### 7.1.1 Estado actual del prototipo
 
-Todo lo marcado como *Must have* en la matriz siguiente está implementado y jugable en `index.html`:
+Todo lo marcado como *Must have* en la matriz siguiente está implementado y jugable en `juego/index.html`:
 
 | Elemento | Estado |
 |---|---|
@@ -315,7 +318,7 @@ Todo lo marcado como *Must have* en la matriz siguiente está implementado y jug
 | HUD, menú principal, selección de nivel, pausa, *Game Over* y resumen de nivel | Hecho |
 | Nivel 3 Pailón del Diablo (huecos, Coloso Cañón) y Nivel 4 Misahuallí (Coloso Apu, final que cambia según los civiles rescatados) | Hecho |
 | Botones en pantalla para atacar y deslizarse | Hecho |
-| Landing page de presentación (`landing/index.html`) | Hecho |
+| Landing page de presentación (`index.html` en la raíz) | Hecho |
 | Bifurcaciones, música y SFX | Pendiente (*Should*) |
 
 | Menú principal | Nivel 1: Atacames |
